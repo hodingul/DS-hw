@@ -1,4 +1,5 @@
-#include  <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "stackL.h"
 
 // 스택이 공백 상태인지 확인하는 연산
@@ -10,7 +11,6 @@ int isStackEmpty() {
 // 스택의 top에 원소를 삽입하는 연산
 void push(element item) {
 	stackNode* temp = (stackNode*)malloc(sizeof(stackNode));
-
 	temp->data = item;
 	temp->link = top;     // 삽입 노드를 top의 위에 연결
 	top = temp;           // top 위치를 삽입 노드로 이동
